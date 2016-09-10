@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+	<title>FAST</title>
+	<link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+	<link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Jura:400,500,600,300' rel='stylesheet' type='text/css' />
+
+	<script src="../js/jquery-1.8.0.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.touchwipe.1.1.1.js" type="text/javascript"></script>
+	<script src="../js/jquery.carouFredSel-5.5.0-packed.js" type="text/javascript"></script>
+	<!--[if lt IE 9]>
+		<script src="../js/modernizr.custom.js"></script>
+	<![endif]-->
+	<script src="../js/functions.js" type="text/javascript"></script>
+</head>
+<!-- wrapper -->
+	<div class="wrapper">
+		<!-- header -->
+		<header class="header">
+			<div class="shell">
+				<div class="header-top">
+					<h1 id="logo"><a href="#">FAST</a></h1>
+					<nav id="navigation">
+						<a href="#" class="nav-btn">主页<span></span></a>
+						<ul>
+							<li class="active home"><a href="../index.html">主页</a></li>
+							<li><a href="../resources.html">资源</a></li>
+							<li><a href="../community.html">社区</a></li>
+							<li><a href="../about.html">关于FAST</a></li>
+						</ul>
+					</nav>
+					<div class="cl">&nbsp;</div>
+				</div>
+				</div>
+		</header>
+		<!-- end of header -->
+		<!-- shell -->
+		<div class="shell">
+			<!-- main -->
+			<div class="main">
+				<section class="post">
+					<div class="post-cnt">
+						<h2><p align="center">FAST：基于FPGA的SDN交换机开源项目</p></h2>
+						<p style="font-size: 16px">自1983年自由软件运动领袖Richard Stallman提出了GNU计划以来，开源为软件开发带来了创造性的革命和商业成功。SDN如今的快速发展也离不开开源社区的力量，比如NOX、Floodlight、OpenContrail等开源项目极大的推动了SDN产业链的发展。但SDN的开源大多都局限在控制器或软件交换机的领域，数据平面的硬件开源项目始终没有迎来一个百花齐放的春天，同时在网络教学研究领域，也没有形成一个有序、规范、有创造力的生态圈，FAST的诞生或许可以提供一个崭新的思路。</p>
+                      <p><span style="font-size: 16px"><strong>他山之石：NetFPGA的启示</strong></span><strong> </strong><br>
+                        <span style="font-size: 16px">NetFPGA是斯坦福大学基于Linux开发的开放性试验平台，能够支持模块化设计，可以使研究人员方便的在其上搭建Gb级的高性能网络系统模型。斯坦福大学刚开始研究OpenFlow项目的时候，就是基于NetFPGA实现了硬件加速的线速OpenFlow交换机。 <br>
+                        自2009年开始，NetFPGA团队陆续将代码和设计文档在GitHub上公开，为四种规格的NetFPGA平台分别建立wiki页面和软硬件开发指南，我们注意到开源给NetFPGA带来了不少&ldquo;红利&rdquo;： <br>
+                        （1）加速项目的版本迭代。由于开源能有效的共享资源，所以可以避免不必要的重复劳动，以NetFPGA 1G为例，18个月间就更新了8个版本，大幅度节约了成本和时间。 <br>
+                        （2）使项目设计和开发变得更加规范可靠。NetFPGA的设计文档在开放平等的基础上供公众审查，200多份的设计文档就有90余人的贡献，足以说明在相互借鉴和比较的基础上，能使硬件单元的设计能够变得有序和规范。 <br>
+                        （3）鼓励创新项目的研究。由于源码的开放，越来越多的研究人员开始关注到NetFPGA，并参与建立了许多基于NetFPGA的项目，比如开源网络测试仪（OSNT），OpenFlow交换机等，可以研究下一代网络提供有益的尝试。 <br>
+                        但是由于NetFPGA硬件平台自身的局限性和对SDN交换机的关注度还不够，所以，我们决定在GitHub上建立FAST开源项目，专注于SDN硬件交换机的设计和重构，为SDN数据平面的研究提供真实实验环境和案例，为高校网络研究教学的发展添砖加瓦。 </span><br>
+                        <span style="font-size: 24px"><strong style="font-size: 16px">FAST的前世今生 </strong></span><br>
+                      <span style="font-size: 16px">FAST的基础硬件应用平台是国内自主研发的NetMagic[1]，与NetFPGA中板卡与主机紧耦合的方式不同，NetMagic采用控制平面与转发平面分离的方式，用户使用自己的电脑，通过网络远程管理配置NetMagic硬件，更具便携性和可扩展性。 </span></p>
+                      <span style="font-size: 16px">FAST（FPGA bAsed SDN  swiThing）是国防科技大学师生提出的一种基于FPGA的可重构交换架构——将报文处理流程拆解成多个独立报文处理阶段，并为每个阶段建立其相应的模块库，开发者根据需要自由地选择功能模块来快速重构报文处理流水线。这种&ldquo;离线重构&rdquo;的方式能够满足多样化的网络需求，大幅度降低网络应用服务开发的难度和网络设备的开发周期。 </p>
+                      <span style="font-size: 16px">如何增强转发平面的灵活性和可扩展性，关键在于对功能库中模块的自由选择，而按照标准扩建模块库，正是建立开源社区的意义所在。在FAST的开源过程中，不仅仅是公开代码和设计文档，而是既能将现有工作进行整合复用，也能给开源数据平面设计提供技术支持，推而广之，FAST实际代表了一种规范化的FPGA交换机的开发模式。</p>
+                      <p><strong style="font-size: 16px">硬件：将可重构进行到底 </strong><br>
+                      <span style="font-size: 16px">硬件部分的源代码需要烧写至FPGA上实现报文转发的功能，主要由以下三部分组成： <br>
+第一部分是FAST流水线模块库的代码，这是实现不同报文处理逻辑的关键，不涉及用什么具体电路元件来实现，是通用且可编程的功能模块，模块使用FAST推荐的标准接口与其他模块相连。用户可根据应用环境的改变而重新选择或改良流水线模块的内容，编译出不同的案例，达到可编程网络的需求。 <br>
+第二部分是与开发平台相关的逻辑代码，比如在对数据通路和控制信息的处理上，NetMagic08采用以太网口通过NMAC协议来传递控制命令，而NetMagicPro和NetFPGA是通过PCIE读写寄存器来获取控制信息。我们希望能广泛支持各类FPGA硬件平台。 <br>
+第三部分是工程配置文件，用于指定所用硬件平台和流水线模块，便于不熟悉硬件开发的研究人员快速编译运行，可以根据实际需求来自行编写配置文件。
+                      <p><strong style="font-size: 16px">软件：转发平面的智囊团 </strong><br>
+                        <span style="font-size: 16px">该软件代码实际上是交换机的管理软件，与硬件代码一起作为SDN的转发平面，向上通过南向接口与控制器交互，实现在实验网络状态下的手动、自动配置以及管理维护。分为以下四个部分： <br>
+                        第一部分是与平台相关的适配通信库，用户态代码实现可以用PC通过NMAC协议与NetMagic08通信，也可以将软件部分放在带有CPU的NetMagicPro平台上通过DMA方式配置硬件流表，实现快速转发，具有高度的灵活性和适配性。 <br>
+                        第二部分是核心管理软件，表管理软件用于TTP定义的流表管理维护，配置信息等，与硬件中的信息保持同步；算法相关软件用于实现硬件查表，验证算法的性能和正确性；统计管理软件主要对硬件转发行为进行统计汇总，可在本地管理界面显示，也可以通过南向接口协议传输到控制器报告实时状态。 <br>
+                        第三部分是配置管理软件，直接与SDN控制器交互，传输和展示本地配置流表信息，支持OpenFlow协议，未来也可以扩展其他南向接口协议的开发与验证。 <br>
+                      第四部分属于转发平面功能的延伸，是为了解决很多课题实验项目中需要借鉴SDN思想，但缺乏可定制化扩展功能的问题。用户只需要在扩展模块中添加适应于自己的转发表项，而无需关心南向接口与平台适配的问题。 </span></p>
+                      <p><span style="font-size: 16px"><strong>FAST的征途：SDN科研创新与高校网络教学 </strong></span><br>
+                        <span style="font-size: 16px">目前，我们在NetMagic08上开发了一个SDN交换机Switch，实现了LISP隧道封装和基于端口转发的模式，验证了BV算法对硬件匹配性能效果的提升，配合开源控制器Floodlight搭建了一个低成本、可重构、易部署的SDN实验环境，后续能够让研究人员进行SDN相关技术的实践和验证。 <br>
+                      FAST具有良好的可重构特性，虽然目前采用的开发模式是从功能模块库中筛选与重组的方式，但在下一步的工作中，实现硬件资源的形式化，同时实现软件代码重编译为硬件代码（例如Altera Open CL，Xilinx Vivado HLS），软件开发者就可以单独完成其底层功能模的设计与更新，能够完美的支持P4的设计与实现。 </span></p>
+                      <span style="font-size: 16px">高校网络教学科研的需求是长期存在的，学生们在进行课程实验使需要对网络设备的转发行为、协议的运行原理进行剖析，老师们也要需要进行更精确的数据建模和算法验证。我们基于NetMagic08开发了一套教学案例NetlabSwitch，能够支持协议观测分析、令牌桶和输出调度原理、SDN交换实现的原理等技术的研究，为网络教学实验提供了一个颇具代表性的示范。 </p>
+                      <p><br>
+                        <span style="font-size: 16px">FAST的目标是为基于FPGA实现SDN交换机研究提供一个开源生态圈，在这个软硬件皆可编程的开放架构下，进一步推动 SDN 交换技术的发展，营造和提升中国高校的开源文化氛围。下一步国防科技大学、北京邮电大学、东南大学和湖南新实网络的相关研究人员将共同组织规范的制定和编写，制作典型案例demo，运作开源社区。 <br>
+                        如何使用FAST的源代码，敬请关注SDNLAB后续的连载。 <br>
+                        欲了解更多信息，请参阅<a href="http://fast-switch.github.io">http://fast-switch.github.io</a></span></p>
+                      作者 国防科大 何璐蓓 厉俊男 刘长鑫 
+                      <p>参考文献 <br>
+                      [1]毛席龙,李韬,孙志刚等.  NetMagic创新实验平台设计指南[M].湖南长沙:国防科技大学出版社, 2012:1-133.</p>
+                      </p>
+                    </div>
+					<div class="cl">&nbsp;</div>
+				</section>
+			</div>
+			<!-- end of main -->
+		</div>
+		<!-- end of shell -->	
+		<!-- footer -->
+		<div id="footer">
+			<!-- shell -->
+			<div class="shell">
+				<!-- footer-cols -->
+				<div class="footer-cols">
+					<div class="col">
+						<h2>资源</h2>
+						<ul>
+							<li><a href="#">文档</a></li>
+							<li><a href="#">源码 </a></li>
+							<li><a href="#">书籍</a></li>
+							<li><a href="#">白皮书</a></li>
+						</ul>
+					</div>
+
+					<div class="col">
+						<h2>社区</h2>
+						<ul>
+							<li><a href="#">实验</a></li>
+							<li><a href="#">博客</a></li>
+						</ul>
+					</div>
+
+					<div class="col">
+						<h2>联系我们</h2>
+
+						<p>Email: <a href="#">netmagic@nudt.edu.cn</a></p>
+						<p>Phone: 15616265487</p>
+						<p>Address: 国防科学技术大学计算机学院 </p>
+						<p>中国 湖南省长沙市</p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+				<!-- end of footer-cols -->
+				<div class="footer-bottom">
+					<div class="footer-nav">
+						<ul>
+							<li><a href="../index.html">主页</a></li>
+							<li><a href="../resources.html">资源</a></li>
+							<li><a href="../community.html">社区</a></li>
+							<li><a href="../about.html">关于FAST</a></li>
+						</ul>
+					</div>
+					<p class="copy">Copyright &copy; 2016<span>FAST TEAM|</span>Design by: <a href="http://chocotemplates.com" target="_blank">www.ChocoTemplates.com</a></p>
+					<div class="cl">&nbsp;</div>
+				</div>
+			</div>
+			<!-- end of shell -->
+		</div>
+		<!-- footer -->
+	</div>
+	<!-- end of wrapper -->
+</body>
+</html>

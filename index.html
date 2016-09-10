@@ -42,14 +42,11 @@
 						<div>
 							<h5>FAST</h5>
 							<h3>demo 演示</h3>
-							<p>层叠网组网案例</p>
+							<p>我们设想了一种数据中心/XXX网络依靠端口映射方式解决负载均衡的解决方案。为了验证该方案的可行性和效率，我们团队采用几台NetMagic08和开源控制器Floodlight组成验证网络环境进行可靠性验证.....</p>
 							<a href="#" class="green-btn">进入</a>
-							<img class="img-front" src="css/images/front-img.png" alt="dot1" width="263" height="300" />
-							<img class="img-mid" src="css/images/img-mid.png" alt="dot2" width="230" height="302" />
-							<img class="img-back" src="css/images/img-back.png" alt="dot3" width="195" height="304" />
+							<img class="img-back" src="css/images/img-back.png" alt="dot3" width="465" height="304" />
 						</div>
-
-						<div>
+						<!--<div>
 							<h5>FAST</h5>
 							<h3>demo 演示</h3>
 							<p>层叠网组网案例</p>
@@ -78,12 +75,12 @@
 							<img class="img-mid" src="css/images/img-mid.png" alt="dot2" width="230" height="302" />
 							<img class="img-back" src="css/images/img-back.png" alt="dot3" width="195" height="304" />
 						</div>
-
+						
 					</div>
 					<div class="pagination"></div>
 					<a id="prev" href="#"></a>
 					<a id="next" href="#"></a>
-				</div>
+				</div>-->
 			</div>
 		</header>
 		<!-- end of header -->
@@ -97,24 +94,24 @@
 					<div class="col">
 						<img src="css/images/col-img1.png" alt="" />
 						<div class="col-cnt">
-							<h2>开源</h2>
-							<p>在此介绍FAST开源</p>
+							<h2>硬件模块开发</h2>
+							<p style="font-size: 16px">硬件模块开发介绍</p>
 							<a href="#" class="more">阅读更多</a>
 						</div>
 					</div>
 					<div class="col">
 						<img src="css/images/col-img2.png" alt="" />
 						<div class="col-cnt">
-							<h2>可重构</h2>
-							<p>在此介绍FAST可重构特性 </p>
+							<h2>软件模块开发</h2>
+							<p style="font-size: 16px">软件模块开发介绍 </p>
 							<a href="#" class="more">阅读更多</a>
 						</div>
 					</div>
 					<div class="col">
 						<img src="css/images/col-img3.png" alt="" />
 						<div class="col-cnt">
-							<h2>平台支持</h2>
-							<p>在此介绍FAST支持的硬件平台</p>
+							<h2>模块组合</h2>
+							<p style="font-size: 16px">选择不同的硬件模块和软件模块，快速搭建不同需求的SDN miniSwitch</p>
 							<a href="#" class="more">阅读更多</a>
 						</div>
 					</div>
@@ -127,16 +124,7 @@
 					<div class="post-cnt">
 						<h2>FAST,软件平面介绍</h2>
 						<p>
-							<strong>软件平面的特性关键字 </strong><br />
-							 FAST软件平面具体介绍. <strong>some of the features:</strong>
-						</p>
-
-						<ul>
-							<li><a href="#">南向接口软件</a></li>
-							<li><a href="#">核心管理软件</a></li>
-							<li><a href="#">转发面功能扩展软件</a></li>
-							<li><a href="#">平台相关通信库 </a></li>
-						</ul>
+							 <span style="font-size: 14px">南向接口软件软件：直接与SDN控制器交互，传输和展示本地配置流表信息，支持OpenFlow协议，未来也可以扩展其他南向接口协议的开发与验证。<br />核心管理软件：表管理软件用于TTP定义的流表管理维护，配置信息等，与硬件中的信息保持同步；算法相关软件用于实现硬件查表，验证算法的性能和正确性；统计管理软件主要对硬件转发行为进行统计汇总，可在本地管理界面显示，也可以通过南向接口协议传输到控制器报告实时状态。<br />转发面功能扩展软件：是为了解决很多课题实验项目中需要借鉴SDN思想，但缺乏可定制化扩展功能的问题。用户只需要在扩展模块中添加适应于自己的转发表项，而无需关心南向接口与平台适配的问题。<br />平台相关通信库：用户态代码实现可以用PC通过NMAC协议与NetMagic08通信，也可以将软件部分放在带有CPU的NetMagicPro平台上通过DMA方式配置硬件流表，实现快速转发，具有高度的灵活性和适配性。<br /></span></p>
 					</div>
 					<div class="cl">&nbsp;</div>
 				</section>
@@ -145,15 +133,7 @@
 					<div class="post-cnt">
 						<h2>FAST,硬件平面介绍</h2>
 						<p>
-							<strong>硬件平面的特性关键字 </strong><br />
-							 FAST硬件平面具体介绍. <strong>some of the features:</strong>
-						</p>
-
-						<ul>
-							<li><a href="#">工程配置文件库</a></li>
-							<li><a href="#">FAST流水线模块库</a></li>
-							<li><a href="#">平台相关逻辑</a></li>
-						</ul>
+					    <span style="font-size: 14px">工程配置文件库：用于指定所用硬件平台和流水线模块，便于不熟悉硬件开发的研究人员快速编译运行，可以根据实际需求来自行编写配置文件。<br />FAST流水线模块库：这是实现不同报文处理逻辑的关键，不涉及用什么具体电路元件来实现，是通用且可编程的功能模块，模块使用FAST推荐的标准接口与其他模块相连。用户可根据应用环境的改变而重新选择或改良流水线模块的内容，编译出不同的案例，达到可编程网络的需求。<br />平台相关逻辑：是与开发平台相关的逻辑代码，比如在对数据通路和控制信息的处理上，NetMagic08采用以太网口通过NMAC协议来传递控制命令，而NetMagicPro和NetFPGA是通过PCIE读写寄存器来获取控制信息。我们希望能广泛支持各类FPGA硬件平台。<br /></span></p>
 					</div>
 					<div class="cl">&nbsp;</div>
 				</section>
@@ -227,7 +207,7 @@
 							<li><a href="about.html">关于FAST</a></li>
 						</ul>
 					</div>
-					<p class="copy">Copyright &copy; 2016<span>|</span>Design by: <a href="http://chocotemplates.com" target="_blank">www.ChocoTemplates.com</a></p>
+					<p class="copy">Copyright &copy; 2016<span>FAST TEAM|</span>Design by: <a href="http://chocotemplates.com" target="_blank">www.ChocoTemplates.com</a></p>
 					<div class="cl">&nbsp;</div>
 				</div>
 			</div>
