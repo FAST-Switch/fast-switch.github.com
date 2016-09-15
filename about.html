@@ -42,11 +42,28 @@
 		<div class="shell">
 			<!-- main -->
 			<div class="main">
-				<h2><p align="center">WHAT'S  FAST?</p></h2>
-					<p>
-					<span style="font-size: 16px">FAST(FPGA bAsed SDN swiThing)是国防科学技术大学师生提出的一种基于FPGA的可重构交换架构——将报文处理流程拆解成多个独立报文处理阶段，为每个阶段都建立相应的模块库，开发者根据需要自由选择处理模块，用于快速重构报文处理流水线。这种“离线重构”的方式能够满足多样化的网络需求，大幅度降低网络应用服务开发的难度和网络设备的开发周期 </span>。</p>
-					<p><span style="font-size: 16px">
-				    如何增强转发平面的灵活性和可扩展性，关键在于对功能模块库中模块的自由选择，而按照标准扩建模块库，正是建立开源社区的意义所在。在FAST的开源过程中，不仅仅是公开代码和设计文档，而是既能将现有工作进行整合复用，也能给开源数据平面设计提供技术支持，推而广之，FAST实际代表了一种规范化的FPGA交换机的开发方法。</span> </p>
+				<h1><p align="center">WHAT'S  FAST?</p>
+				  <p align="center">&nbsp;</p>
+				</h1>
+					<p><span style="font-size: 20px">一、FAST 简介</span></p>
+					<p><span style="font-size: 16px">FAST(FPGA bAsed SDN swiThing)是一种以FPGA为转发平面核心的SDN交换机实现架构，其基本思想是可重构交换架构——将报文处理流程拆解成多个独立报文处理阶段，为每个阶段都建立相应的模块库，开发者根据需要自由选择处理模块，用于快速重构报文处理流水线。这种“离线重构”的方式能够满足多样化的SDN交换需求，大幅度降低网络应用服务开发的难度和网络设备的开发周期 。</span></p>
+					<p><span style="font-size: 16px">FAST目前支持的FPGA平台包括NetMagic08和NetMagic Pro平台，其初始代码（包括FPGA的设计代码、openflow控制通道代码、表管理代码等）主要来自三个渠道：</span></p>
+					<p><span style="font-size: 16px"> （1）2011-2015年期间国防科技大学计算机学院研究生课程《路由器原理与设计》中，基于NetMagic08平台的课程作业；</span></p>
+					<p><span style="font-size: 16px"> （2）2012年以来，国防科大与香港理工大学、北京邮电大学、东南大学、中科院计算所等单位基于NetMagic08和NetMagic Pro平台进行的互联网测量、SDN交换和软件定义的实验床等相关研究和开发工作；</span></p>
+					<p><span style="font-size: 16px"> （3）湖南新实网络贡献的其核心网络教学平台NETEXP的软硬件设计和案例代码。 </span></p>
+					<p align="center">&nbsp;</p>
+					<p><span style="font-size: 20px">二、FAST 代码</span></p>
+					<p><span style="font-size: 16px">目前FAST社区中包含的源代码并不只是一个独立的FAST交换机项目，而是多个基于FPGA的交换机实现实例，包括： </span></p>
+                    <li><span style="font-size: 16px">基于MetMagic08和NetMagic Pro的自学习二层交换机（L2-Switch-08/L2-Switch-Pro）</span> </li>
+                    <li><span style="font-size: 16px">基于NetMagic08的支持openflow1.0的SDN交换机miniSwitch</span></li>
+                    <li><span style="font-size: 16px">基于FPGA+CPU（OVS软件）实现的支持openflow1.3的SDN交换机OFS-08和OFS-pro等。</span> </li>
+                    <p><span style="font-size: 16px">拥有NetMagic08和NetMagic Pro平台的用户都可以从网站上下载相关工程代码实现自己的FPGA交换机，也可以积极参与设计代码的更新，贡献新的功能代码。2016年下半年，还会有第三方公司推出新的支持FAST的FPGA交换平台。</span> </p>
+                    <p align="center">&nbsp;</p>
+					<p><span style="font-size: 20px">三、FAST 用户</span></p>
+					<p><span style="font-size: 16px">FAST将软硬件代码划分为平台相关代码和平台无关代码。平台厂商负责设计和测试平台相关代码，并选择是完全开源，还是只提供可运行的映像。平台无关代码全部开源，用于支持SDN相关的技术研究和教学。FAST用户可以无偿使用这些代码，提出新的需求，或直接提供给新的代码。</span></p>
+					<p align="center">&nbsp;</p>
+					<p><span style="font-size: 20px">四、FAST 社区维护</span></p>
+					<p><span style="font-size: 16px">目前，多名来自国防科大计算机学院和湖南新实网络科技有限公司的研究生和工程师已志愿进行FAST开源社区的维护工作，包括文档整理，代码整理和测试等工作，期待更多对SDN交换感兴趣人员加入到FAST的开发中。</span></p>
 			</div>
 			<!-- end of main -->
 		</div>
