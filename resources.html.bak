@@ -45,8 +45,9 @@
 			<section class="post" id="documentation">
 				<div class="post-cnt">
 					<h2>文档</h2>
-					<p> <span style="font-size: 16px"><a href="wiki/FAST详细设计文档">FAST设计文档</a></span> </p>
-					<p> <span style="font-size: 16px"><a href="wiki/demo演示文档">demo演示文档</a></span> </p>
+					<p>
+						 <span style="font-size: 16px">FAST详细设计文档 <a href="https://github.com/FAST-Switch/fast/archive/master.zip">点击下载</a></span> 
+					</p>
 				</div>
 			</section>
 			<section class="post" id="code">
@@ -59,24 +60,17 @@
 			</section>
 			<section class="post" id="paper">
 				<div class="post-cnt">
-					<h2>2016“软件定义网络(SDN)交换技术”研讨会演讲ppt汇总</h2>
-					<p><span style="font-size: 16px"><a href="wiki/胡成臣-Rethinking_SDN_Abstraction.pdf">胡成臣-Rethinking_SDN_Abstraction.pdf</a></span></p>
-					<p><span style="font-size: 16px"><a href="wiki/张卫峰-SDN对核心交换芯片的需求.pdf">张卫峰-SDN对核心交换芯片的需求.pdf</a></span></p>
-					<p><span style="font-size: 16px"><a href="wiki/范开基-SDN通用转发器的研究和实践.pdf">范开基-SDN通用转发器的研究和实践.pdf</a></span></p>
-					<p><span style="font-size: 16px"><a href="wiki/杜林-Conmercial-SDN-ASIC-Introduction-by-PICA8.pdf">杜林-Conmercial-SDN-ASIC-Introduction-by-PICA8.pdf</a></span></p>
-					<p><span style="font-size: 16px"><a href="wiki/詹晋川-面向数据中心的高性能 SDN交换技术.pdf">詹晋川-面向数据中心的高性能 SDN交换技术.pdf</a></span></p>
-					<p><span style="font-size: 16px"><a href="wiki/张春元-基于流处理器的完全可编程SDN处理器 - tjeo4.pdf">张春元-基于流处理器的完全可编程SDN处理器 - tjeo4.pdf</a></span></p>
-					<p><span style="font-size: 16px"><a href="wiki/杨帅-P4语言基础与实战.pdf">杨帅-P4语言基础与实战.pdf</a></span></p>
-					<p><span style="font-size: 16px"><a href="wiki/李韬-FAST-基于FPGA的SDN交换机开源项目-20161015.pdf">李韬-FAST-基于FPGA的SDN交换机开源项目-20161015.pdf</a></span></p>
-					<p><span style="font-size: 16px"><a href="wiki/韩彪-基于FAST的软件定义隧道交换机（SD-TS）定制及应用.pdf">韩彪-基于FAST的软件定义隧道交换机（SD-TS）定制及应用.pdf</a></span></p>
-					<p><span style="font-size: 16px"><a href="wiki/厉俊男-基于FPGA的P4研究－2.pdf">厉俊男-基于FPGA的P4研究－2.pdf</a></span></p>
+					<h2>白皮书</h2>
+					<p>
+				    <span style="font-size: 16px">中文：<a href="#">pdf</a>,<a href="#">html</a></span>                                        
+					</p>
 				</div>
 			</section>
 			<section class="post" id="book">
 				<div class="post-cnt">
-					<h2>白皮书</h2>
+					<h2>书籍</h2>
 					<p>
-				    <span style="font-size: 16px">中文：<a href="wiki/李韬-FAST-基于FPGA的SDN交换机开源项目-20161015.pdf">pdf</a>,<a href="#">html</a></span>                                        
+				    <span style="font-size: 16px">中文：<a href="#">pdf</a>,<a href="#">html</a></span>                                        
 					</p>
 				</div>
 			</section>
